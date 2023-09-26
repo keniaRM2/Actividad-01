@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+
 
 function Navbar() {
   return (
@@ -43,7 +45,7 @@ function Navbar() {
             <a className="nav-link " href="./comments.html">Comentarios </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="./contactanos.html">Contáctanos </a>
+            <Link to="/contacts" className="nav-link">Contactanos</Link>
           </li>
         </ul>
       </div>

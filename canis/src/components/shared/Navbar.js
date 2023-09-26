@@ -1,55 +1,41 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from 'react-bootstrap/Container';
 
-function Navbar() {
+export default () => {
+
+  const menu = [
+    { titulo: "Home", ruta: "/home" },
+    { titulo: "On boarding", ruta: "/xx" },
+    { titulo: " Acerca de nosotros", ruta: "/nosotros" },
+    { titulo: "Noticias", ruta: "/notificas" },
+    { titulo: "Blog", ruta: "/blod" },
+    { titulo: "Comentarios", ruta: "/comentarios" },
+    { titulo: "Contáctanos", ruta: "/contactanos" }
+  ];
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="container-fluid">
-      <a className="navbar-brand" href="../index.html">
-        {/* <img src="https://placehold.co/60x50/02ac89/FFF" alt="logotipo"
-        /> */}
 
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item">
-            <a className="nav-link" href="./onboarding.html">On boarding </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link " aria-current="page" href="./aboutus.html">
-              Acerca de nosotros</a
-            >
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="./noticias.html">Noticias</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="../blog.html">Blog</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link active" href="./home.html">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link " href="./comments.html">Comentarios </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="./contactanos.html">Contáctanos </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <Navbar fixed="top" style={{padding: "0"}}>
+      <Navbar.Toggle/>
+      <Navbar.Collapse className="bg-utez">
+        <Nav >
+          <Nav.Link>
+          {/* <img src="https://placehold.co/60x50/02ac89/FFF" alt="logotipo" */}
+          </Nav.Link>
+          {menu.map((elemento, index) => (
+          <Nav.Link className="text-white" key={index} href={elemento.ruta}>
+            {elemento.titulo}
+          </Nav.Link>
+        ))}
+        </Nav>
+        
+      </Navbar.Collapse>
+    </Navbar>
+
+    
   );
-}
-
-export default Navbar;
+};

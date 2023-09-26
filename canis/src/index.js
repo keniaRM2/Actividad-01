@@ -4,7 +4,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./assets/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./assets/css/styles.css";
+
 import Router from "./router";
 
 ReactDOM.render(

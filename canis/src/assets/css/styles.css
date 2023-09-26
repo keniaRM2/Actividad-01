@@ -1,0 +1,23 @@
+.error_404 {
+    height: 100vh;
+    background-image: url('../images/404.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #f8f8f8 !important;
+}
+
+.container {
+    background-color: white !important;
+}
+
+.bg-utez{
+    background-color: #019979;
+    color: white !important;
+}

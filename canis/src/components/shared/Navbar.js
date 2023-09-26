@@ -26,7 +26,7 @@ function Navbar() {
             <a className="nav-link" href="./onboarding.html">On boarding </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link " aria-current="page" href="./aboutus.html">
+            <a className="nav-link  active" aria-current="page" href="./aboutus">
               Acerca de nosotros</a
             >
           </li>
@@ -37,7 +37,7 @@ function Navbar() {
             <a className="nav-link" href="../blog.html">Blog</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" href="./home.html">Home</a>
+            <a className="nav-link" href="./home.html">Home</a>
           </li>
           <li className="nav-item">
             <a className="nav-link " href="./comments.html">Comentarios </a>

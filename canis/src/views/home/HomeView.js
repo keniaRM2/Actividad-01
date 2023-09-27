@@ -22,7 +22,7 @@ function HomeView() {
 
 
 
-        <div className="container" style={{ marginTop: "75px" }}> 
+        <div className="container" style={{ marginTop: "3%" }}> 
           <PlanEstudios />
 
 

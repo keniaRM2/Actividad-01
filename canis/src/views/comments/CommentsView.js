@@ -3,7 +3,7 @@ import Navbar from "../../components/shared/Navbar";
 
 
 function CommentsView() {
-  // Tu códirertgo para la vista de comentarios
+
   return(
     <>
     <Navbar/>

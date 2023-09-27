@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeView from '../views/home/HomeView';
 import View404 from '../views/errors/View404';
 import AboutUsView from '../views/aboutUs/AboutUsView'
+import News from '../views/news/NewsScreen';
 
 var router = () => {
 
@@ -18,7 +19,7 @@ var router = () => {
             <Route exact path="/" key="home" Component={HomeView}/>
             <Route exact path="/home" key="home" Component={HomeView}/>          
             <Route exact path="/aboutus" key="aboutus" Component={AboutUsView}/>
-
+            <Route exact path="/noticias" key = "noticias" Component={ News }/>
 
             <Route exact path="/*" key="404" Component={View404}/>
         </Routes>

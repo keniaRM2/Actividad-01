@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/shared/Navbar";
-import './onboarding.js'
+import Onboarding from "./onboarding";
 
 function OnboardingView(){
 
@@ -36,7 +36,7 @@ function OnboardingView(){
                     </card>
                 </div>
             </div></><div>
-                <div id="recorrido"></div>
+                <Onboarding/>
             </div></>
     );
 }

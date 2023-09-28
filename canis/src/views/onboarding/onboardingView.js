@@ -1,45 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Define los pasos del recorrido
-    const pasos = [
-        { elemento: "acerca", mensaje: "Bienvenido a la página 'Acerca de Nosotros'. Aquí puedes obtener información sobre nuestra organización." },
-        { elemento: "contacto", mensaje: "Visita la página 'Contáctanos' para obtener detalles de contacto y enviarnos un mensaje." },
-        { elemento: "oferta", mensaje: "Explora nuestra 'Oferta Educativa' para conocer nuestros programas de estudio." },
-        { elemento: "plan", mensaje: "Consulta el 'Plan de Estudio' para obtener información detallada sobre nuestros cursos y currículo." }
-    ];
+import React from "react";
+import Navbar from "../../components/shared/Navbar";
+import './onboarding.js'
 
-    // Función para mostrar un paso del recorrido
-    function mostrarPaso(paso) {
-        const elemento = document.querySelector(`[href="#${paso.elemento}"]`);
-        const recorrido = document.getElementById("recorrido");
+function OnboardingView(){
 
-        // Posiciona el recorrido junto al enlace
-        const rect = elemento.getBoundingClientRect();
-        recorrido.style.left = rect.left + "px";
-        recorrido.style.top = rect.bottom + "px";
+    return (
+        
+        <>
+        <><Navbar />
+            <div class="container">
+                <div class="card">
+                    <card class="card-body">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand" href="#">Tu Sitio</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#acerca">Acerca de Nosotros</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contacto">Contáctanos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#oferta">Oferta Educativa</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#plan">Plan de Estudio</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </card>
+                </div>
+            </div></><div>
+                <div id="recorrido"></div>
+            </div></>
+    );
+}
 
-        // Muestra el mensaje del paso
-        recorrido.innerHTML = paso.mensaje;
-        recorrido.style.display = "block";
-    }
-
-    // Función para ocultar el recorrido
-    function ocultarPaso() {
-        const recorrido = document.getElementById("recorrido");
-        recorrido.style.display = "none";
-    }
-
-    // Iniciar el recorrido con el primer paso
-    let indicePaso = 0;
-    mostrarPaso(pasos[indicePaso]);
-
-    // Manejar clic en cualquier parte de la página para avanzar al siguiente paso
-    document.addEventListener("click", function () {
-        indicePaso++;
-        if (indicePaso < pasos.length) {
-            mostrarPaso(pasos[indicePaso]);
-        } else {
-            // Cuando se completan todos los pasos, oculta el recorrido
-            ocultarPaso();
-        }
-    });
-});
+export default OnboardingView;

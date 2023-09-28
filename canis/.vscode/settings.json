@@ -9,4 +9,5 @@
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.enablePreviewFromQuickOpen": false,
 	"window.title": "FRONTEND",
+	"liveServer.settings.port": 5501
 }

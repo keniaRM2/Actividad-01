@@ -12,6 +12,7 @@ import AboutUsView from '../views/aboutUs/AboutUsView'
 import News from '../views/news/NewsScreen';
 import ContactsView from '../views/contacts/ContactsView';
 import CommentsView from '../views/comments/CommentsView';
+import OnboardingView from "../views/onboarding/onboardingView";
 
 var router = () => {
 
@@ -24,10 +25,11 @@ var router = () => {
             <Route exact path={routerConstans.NEWS}key = "noticias" Component={ News }/>
             <Route exact path={routerConstans.COMMENT} key="comments" Component={CommentsView}/>
             <Route exact path={routerConstans.CONTACTS} key="contacts"  Component={ContactsView}/>
-            <Route exact path={routerConstans.ONBOARDING} key="contacts"  Component={ContactsView}/>
-           
+            <Route exact path={routerConstans.ONBOARDING} key="contacts"  Component={OnboardingView}/>
+         
             <Route exact path="/*" key="404" Component={View404}/>
           
+           
         </Routes>
     </BrowserRouter>)
 };
